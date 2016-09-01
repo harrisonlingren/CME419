@@ -5,7 +5,39 @@
 </head>
 <body>
   <?php
-    echo "Hello, world!";
-   ?>
+    $firstName = 'Bob';
+    $lastName = 'Smith';
+    $item = 'shirt';
+    $color = 'red';
+    $price = 9.98;
+    $quantity = 2;
+    $subtotal = $price * $quantity;
+    $total = $subtotal * 1.07;
+  ?>
+
+  <hr />
+  <h3>Content that is required:</h3>
+
+  <ul>
+    <li>
+      <?php echo "Name: $firstName $lastname" ?>
+    </li>
+    <li>
+      <?php echo "Item: $color $item" ?>
+    </li>
+    <li>
+      <?php echo "Item Price: $price" ?>
+    </li>
+    <li>
+      <?php echo "Quantity: $quantity" ?>
+    </li>
+    <li>
+      <?php echo "Subtotal: $subtotal" ?>
+    </li>
+    <li>
+      <?php echo "Total: $total" ?>
+    </li>
+  </ul>
+
 </body>
 </html>
