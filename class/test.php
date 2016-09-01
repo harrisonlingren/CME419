@@ -8,7 +8,7 @@
     $firstName = 'Bob';
     $lastName = 'Smith';
     $item = 'shirt';
-    $color = 'red';
+    $color = 'Red';
     $price = 9.98;
     $quantity = 2;
     $subtotal = $price * $quantity;
@@ -20,22 +20,22 @@
 
   <ul>
     <li>
-      <?php echo "Name: $firstName $lastname" ?>
+      <?php echo 'Name: $firstName $lastname' ?>
     </li>
     <li>
-      <?php echo "Item: $color $item" ?>
+      <?php echo 'Item: $color $item' ?>
     </li>
     <li>
-      <?php echo "Item Price: $price" ?>
+      <?php echo 'Item Price: $price' ?>
     </li>
     <li>
-      <?php echo "Quantity: $quantity" ?>
+      <?php echo 'Quantity: $quantity' ?>
     </li>
     <li>
-      <?php echo "Subtotal: $subtotal" ?>
+      <?php echo 'Subtotal: $' + 'number_format($subtotal, 2)' ?>
     </li>
     <li>
-      <?php echo "Total: $total" ?>
+      <?php echo 'Total: $' + 'number_format($total, 2)' ?>
     </li>
   </ul>
 
