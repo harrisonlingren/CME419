@@ -16,8 +16,7 @@
     $total = $subtotal * 1.07;
     $totalStr = number_format($total, 2);
   ?>
-
-  <hr />
+  
   <h3>Content that is required:</h3>
 
   <ul>
