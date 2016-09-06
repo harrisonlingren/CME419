@@ -22,22 +22,22 @@
 
   <ul>
     <li>
-      <?php echo 'Name: ' + $firstName + ' ' + $lastname ?>
+      <?php echo 'Name: ' . $firstName . ' ' . $lastname ?>
     </li>
     <li>
-      <?php echo 'Item: ' + $color + ' ' + $item ?>
+      <?php echo 'Item: ' . $color . ' ' . $item ?>
     </li>
     <li>
-      <?php echo 'Item Price: ' + $price ?>
+      <?php echo 'Item Price: ' . $price ?>
     </li>
     <li>
-      <?php echo 'Quantity: ' + $quantity ?>
+      <?php echo 'Quantity: ' . $quantity ?>
     </li>
     <li>
-      <?php echo 'Subtotal: $' + $SubtotalStr ?>
+      <?php echo 'Subtotal: $' . $SubtotalStr ?>
     </li>
     <li>
-      <?php echo 'Total: $' + $totalStr ?>
+      <?php echo 'Total: $' . $totalStr ?>
     </li>
   </ul>
 
