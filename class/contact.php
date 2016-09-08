@@ -13,7 +13,7 @@
       <option value="Male">Male</option>
       <option value="Female">Female</option>
     </select><br />
-    <input type="text" placeholder="Majors" name="fName" id="fName" /><br />
+    <input type="text" placeholder="Majors" name="majors" id="majors" /><br />
     <input type="text" placeholder="Comments" name="comments" id="comments" /><br /><br />
     <button type="submit">Submit</button>
   </form>

@@ -18,7 +18,7 @@
   echo "<p>Thank you, $fullName for submitting your information. The following
   information was obtained from your form:</p>";
 
-  echo "Email: $email\nGender: $gender\nMajor(s): $majors \nComments: $comments\n";
+  echo "Email: $email <br />Gender: $gender <br />Major(s): $majors <br />Comments: $comments";
   ?>
 </body>
 
