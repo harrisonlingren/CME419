@@ -5,10 +5,10 @@
 </head>
 
 <body>
-  <form method="post" action="procForm.php">
-    <input type="text" placeholder="First Name" name="fName" id="fName" /><br />
-    <input type="text" placeholder="Last Name" name="lName" id="lName" /><br />
-    <input type="text" placeholder="Email" name="email" id="email" /><br />
+  <form method="post" action="thanks.php">
+    <input type="text" placeholder="First Name" required name="fName" id="fName" /><br />
+    <input type="text" placeholder="Last Name" required name="lName" id="lName" /><br />
+    <input type="text" placeholder="Email" required name="email" id="email" /><br />
 
     <select name="birthMonth" placeholder="Month" id="birthMonth" />
       <?php
@@ -43,7 +43,19 @@
 
     <select name="major" placeholder="Major..." id="major">
       <?php
-        $majors = array('CSD', 'CME', 'CCM', 'HCOL', 'Journalism', 'StratCom');
+        $majors = array(
+          'Communication Science and Disorders',
+          'Digital Media Production',
+          'Interactive Media,'
+          'Recording Industry Studies',
+          'Critical Communication and Media Studies',
+          'Human Communication and Organizational Leadership',
+          'Journalism',
+          'Sports Media',
+          'Strategic Communication',
+          'Public Relations',
+          'Advertising'
+        );
         foreach ($majors as $x) {
           echo "<option value='$x'>$x</option>";
         }

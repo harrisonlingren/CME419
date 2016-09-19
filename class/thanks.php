@@ -17,6 +17,10 @@
     $comments = $_POST['comments'];
     $fullName = $firstName . " " . $lastName;
 
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+
     $msg = "<p>Thank you, $fullName for submitting your information. The following
     information was obtained from your form:</p>
     <br /><br />
