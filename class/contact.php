@@ -14,8 +14,8 @@
       <?php
         $months = array('January', 'February', 'March', 'April', 'May', 'June',
         'July', 'August', 'September', 'October', 'November', 'December');
-        for ($x=0;$x<=11;$x++) {
-          echo "<option value='$x'>$months[$x]</option>";
+        foreach ($months as $x) {
+          echo "<option value='$x'>$x</option>";
         }
       ?>
     </select>
