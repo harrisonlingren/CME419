@@ -15,7 +15,7 @@
         $months = array('January', 'February', 'March', 'April', 'May', 'June',
         'July', 'August', 'September', 'October', 'November', 'December');
         for ($x=0;$x<=11;$x++) {
-          echo '<option value="$x">' . $months[$x] . '</option>';
+          echo "<option value='$x'>$months[$x]</option>";
         }
       ?>
     </select>
@@ -23,7 +23,7 @@
     <select name="birthDay" placeholder="Day" id="birthDay" />
       <?php
         for ($x=1;$x<=31;$x++) {
-          echo '<option value="$x">$x</option>';
+          echo "<option value='$x'>$x</option>";
         }
       ?>
     </select>
@@ -31,10 +31,10 @@
     <select name="birthYear" placeholder="Year" id="birthYear" />
       <?php
         for ($x=1980;$x<=2010;$x++) {
-          echo '<option value="$x">$x</option>';
+          echo "<option value='$x'>$x</option>";
         }
       ?>
-    </select>
+    </select><br />
 
     <select name="gender" id="gender">
       <option value="Male">Male</option>
@@ -42,15 +42,14 @@
     </select><br />
 
     <select name="major" placeholder="Major..." id="major">
-      <<?php
+      <?php
         $majors = array('CSD', 'CME', 'CCM', 'HCOL', 'Journalism', 'StratCom');
-        foreach ($majors as $major) {
-          echo '<option value="$major">$major</option>';
+        foreach ($majors as $x) {
+          echo "<option value='$x'>$x</option>";
         }
       ?>
-    </select>
+    </select><br />
 
-    <input type="text" placeholder="Majors" name="majors" id="majors" /><br />
     <input type="text" placeholder="Comments" name="comments" id="comments" /><br /><br />
     <button type="submit">Submit</button>
   </form>
