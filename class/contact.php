@@ -14,7 +14,7 @@
       <?php
         $months = array('January', 'February', 'March', 'April', 'May', 'June',
         'July', 'August', 'September', 'October', 'November', 'December');
-        for ($x=0;$x<11;$x++) {
+        for ($x=0;$x<=11;$x++) {
           echo '<option value="$x">' . $months[$x] . '</option>';
         }
       ?>
@@ -22,7 +22,7 @@
 
     <select name="birthDay" placeholder="Day" id="birthDay" />
       <?php
-        for ($x=1;$x=31;$x++) {
+        for ($x=1;$x<=31;$x++) {
           echo '<option value="$x">$x</option>';
         }
       ?>
@@ -30,7 +30,7 @@
 
     <select name="birthYear" placeholder="Year" id="birthYear" />
       <?php
-        for ($x=1980;$x<2010;$x++) {
+        for ($x=1980;$x<=2010;$x++) {
           echo '<option value="$x">$x</option>';
         }
       ?>
