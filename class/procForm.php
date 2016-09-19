@@ -22,7 +22,8 @@
     <br /><br />
     Email: $email <br />Birth date: $birthMonth $birthDay, $birthYear <br />Gender: $gender <br />Major(s): $major <br />Comments: $comments";
 
-    mail($email, "Your submission", $msg);
+    $headers = "MIME-Version: 1.0\r\nContent-type:text/html;charset=UTF-8\r\n";
+    mail($email, "Your submission", $msg, $headers);
     echo $msg;
   ?>
 </body>
