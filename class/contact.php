@@ -44,17 +44,17 @@
     <select name="major" placeholder="Major..." id="major">
       <?php
         $majors = array(
-          'Communication Science and Disorders',
-          'Digital Media Production',
-          'Interactive Media,'
-          'Recording Industry Studies',
-          'Critical Communication and Media Studies',
-          'Human Communication and Organizational Leadership',
-          'Journalism',
-          'Sports Media',
-          'Strategic Communication',
-          'Public Relations',
-          'Advertising'
+          "Communication Science and Disorders",
+          "Digital Media Production",
+          "Interactive Media",
+          "Recording Industry Studies",
+          "Critical Communication and Media Studies",
+          "Human Communication and Organizational Leadership",
+          "Journalism",
+          "Sports Media",
+          "Strategic Communication",
+          "Public Relations",
+          "Advertising"
         );
         foreach ($majors as $x) {
           echo "<option value='$x'>$x</option>";
