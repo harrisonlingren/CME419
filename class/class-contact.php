@@ -16,8 +16,10 @@
 		</style>
 	</head>
 	<body>
-		
-		<form method="post" action="procForm.php">
+
+		<?php  ?>
+
+		<form method="post" action="">
 			<label>First Name:</label>
 			<input type="text" name="fName"/><br/>
 			<label>Last Name:</label>
@@ -37,9 +39,17 @@
 			<label>Comment:</label>
 			<textarea name="comment"></textarea><br/>
 			<input type="submit" value="Submit Form" id="submit" name="submit"/>
-			
-			
 		</form>
-		
+
+		<?php
+			if ($_SERVER['REQUEST_METHOD']=='POST') {
+				if (!empty($firstName) && !empty($lastName) && !empty($email)) {
+
+				} else {
+
+				}
+			}
+		?>
+
 	</body>
 </html>
