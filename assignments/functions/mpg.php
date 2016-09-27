@@ -34,7 +34,8 @@
       $inches = $_POST['gallons'];
     }
 
-  $mpg = getMpg($miles, $gallons);
+    $mpg = getMpg($miles, $gallons);
+  }
 ?>
 
 <form action="" method="post">
