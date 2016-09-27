@@ -36,6 +36,7 @@
 
     $height = ($feet * 12) + $inches;
     echo $ftErr + "\n" + $inErr + "\n" + $wtErr;
+    echo $feet + "\n" + $inches + "\n" + $height + "\n" + $weight;
     echo getBmi($height, $weight);
   }
 ?>
