@@ -6,7 +6,15 @@
 
   $ftErr = $inErr = $wtErr = "";
   $feet = $inches = $weight = 0;
+?>
 
+<form action="" method="post">
+  <label>Width</label><input type="text" id="feet" placeholder="feet" /><input type="text" id="inches" placeholder="inches" /><br />
+  <label>Height</label><input type="text" id="weight" /><br /><br />
+  <button type="submit">Calculate BMI</button>
+</form>
+
+<?php
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["feet"])) {
       $ftErr = "Feet value is required";
@@ -27,13 +35,7 @@
     }
 
     $height = ($feet * 12) + $inches;
+    echo $ftErr + "\n" + $inErr + "\n" + $wtErr;
+    echo getBmi($height, $weight);
   }
 ?>
-
-<form action="" method="post">
-  <label>Width</label><input type="text" id="feet" placeholder="feet" /><input type="text" id="inches" placeholder="inches" /><br />
-  <label>Height</label><input type="text" id="weight" /><br /><br />
-  <button type="submit">Calculate BMI</button>
-</form>
-
-<?php echo getBmi($height, $weight); ?>
