@@ -31,7 +31,7 @@
     if (empty($_POST["gallons"])) {
       echo "Gallons value is required<br />";
     } else {
-      $inches = $_POST['gallons'];
+      $gallons = $_POST['gallons'];
     }
     $mpg = getMpg($miles, $gallons);
     $msg = "MPG: $mpg";
