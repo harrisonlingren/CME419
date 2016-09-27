@@ -17,18 +17,16 @@
 <?php
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["aWidth"])) {
-      $wtErr = "Width value is required";
+      echo "Width value is required<br />";
     } else {
       $width = $_POST['aWidth'];
     }
 
     if (empty($_POST["aHeight"])) {
-      $htErr = "Weight value is required";
+      echo "Weight value is required<br />";
     } else {
       $height = $_POST['aHeight'];
     }
-    
     echo "<h3>Area is: " . getArea($height, $width) . "</h3>";
-    echo "<br />$htErr<br />$wtErr<br />";
   }
 ?>

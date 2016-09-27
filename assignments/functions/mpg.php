@@ -23,17 +23,16 @@
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["miles"])) {
-      $miErr = "Miles value is required";
+      echo "Miles value is required<br />";
     } else {
       $miles = $_POST['miles'];
     }
 
     if (empty($_POST["gallons"])) {
-      $galErr = "Gallons value is required";
+      echo "Gallons value is required<br />";
     } else {
       $inches = $_POST['gallons'];
     }
-
     $mpg = getMpg($miles, $gallons);
   }
 ?>
@@ -47,10 +46,3 @@
   <input type="radio" id="good" <?php echo "selected=" . getBool($mpg, "good"); ?> /><label for="good">Good Efficiency</label><br /><br />
   <button type="submit">Check Efficiency</button>
 </form>
-
-<?php
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "<h3>MPG is: $mpg</h3>";
-    echo "<br />$miErr<br />$galErr";
-  }
-?>
