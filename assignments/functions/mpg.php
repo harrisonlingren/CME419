@@ -34,7 +34,7 @@
       $gallons = $_POST['gallons'];
     }
     $mpg = getMpg($miles, $gallons);
-    $msg = "MPG: $mpg";
+    $msg = "You get $mpg miles to the gallon.";
   }
 ?>
 
