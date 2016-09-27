@@ -111,7 +111,7 @@
       $major = $_POST['major'];
       $comments = $_POST['comments'];
       $fullName = $firstName . " " . $lastName;
-      
+
       if (empty($firstName) || empty($lastName) || empty($email) || !validate($email)) {
         $msg = '<p>Your form did not submit. Please include the following:</p><ul>';
         if (empty($firstName)) {$msg .= '<li>First Name: ' . $firstName . '</li>';}
