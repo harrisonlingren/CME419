@@ -7,13 +7,13 @@
   function getBool($m, $r) {
     switch ($r) {
       case 'bad':
-        if ($m < 18) {return true;}
+        if ($m < 18) {return True;}
       case 'avg':
-        if ($m > 17 && $m < 27) {return true;}
+        if ($m > 17 && $m < 27) {return True;}
       case 'good':
-        if ($m > 26) {return true;}
+        if ($m > 26) {return True;}
       default:
-        return false;
+        return False;
         break;
     }
   }
