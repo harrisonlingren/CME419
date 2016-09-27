@@ -50,5 +50,4 @@
 <?php
     echo "<h3>MPG is: $mpg</h3>";
     echo "<br />$miErr<br />$galErr";
-  }
 ?>
