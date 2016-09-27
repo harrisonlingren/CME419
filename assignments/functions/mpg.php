@@ -34,6 +34,7 @@
       $inches = $_POST['gallons'];
     }
     $mpg = getMpg($miles, $gallons);
+    $msg = "MPG: $mpg";
   }
 ?>
 
@@ -46,3 +47,5 @@
   <input type="radio" id="good" <?php echo "selected=" . getBool($mpg, "good"); ?> /><label for="good">Good Efficiency</label><br /><br />
   <button type="submit">Check Efficiency</button>
 </form>
+
+<?php echo $msg; ?>
