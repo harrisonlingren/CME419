@@ -7,7 +7,9 @@
   $ftErr = "";
   $inErr = "";
   $wtErr = "";
-  //$feet = $inches = $weight = 0;
+  $feet = 0;
+  $inches = 0;
+  $weight = 0;
 ?>
 
 <form action="" method="post">
