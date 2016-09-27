@@ -4,6 +4,18 @@
     return number_format($bmi, 2, '.', '');
   }
 
+  function getWeightStat($b) {
+    if ($b > 30) {
+      return "obese";
+    } elseif ($b > 24.9) {
+      return "overweight";
+    } elseif ($b > 18.5) {
+      return "normal";
+    } else {
+      return "underweight";
+    }
+  }
+
   $ftErr = "";
   $inErr = "";
   $wtErr = "";
@@ -36,7 +48,9 @@
     }
 
     $height = ($feet * 12) + $inches;
-    echo "<h3>BMI is: " . getBmi($height, $weight) . "</h3>";
+    $bmi = getBmi($height, $weight);
+
+    echo "<h3>Your BMI is: " . $bmi . ". Your weight class is " . getWeightStat($bmi) . ".</h3>";
     echo "<br />$ftErr<br />$inErr<br />$wtErr<br />";
   }
 ?>

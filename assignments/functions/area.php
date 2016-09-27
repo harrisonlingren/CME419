@@ -27,6 +27,6 @@
     } else {
       $height = $_POST['aHeight'];
     }
-    echo "<h3>Area is: " . getArea($height, $width) . "</h3>";
+    echo "<h3>Your area is: " . getArea($height, $width) . "</h3>";
   }
 ?>
