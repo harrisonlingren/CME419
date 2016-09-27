@@ -48,4 +48,4 @@
   <button type="submit">Check Efficiency</button>
 </form>
 
-<?php echo $msg; ?>
+<?php echo $msg; echo getBool($mpg, "bad");?>
