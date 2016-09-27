@@ -9,8 +9,8 @@
 ?>
 
 <form action="" method="post">
-  <label for="aWidth">Width</label><input type="text" name="aWidth" id="aWidth" /><br />
-  <label for="aHeight">Height</label><input type="text" name="aHeight" id="aHeight" /><br /><br />
+  <label for="aWidth">Width</label><input type="text" name="aWidth" id="aWidth" value="<?php echo $width;?>"/><br />
+  <label for="aHeight">Height</label><input type="text" name="aHeight" id="aHeight" value="<?php echo $height;?>"/><br /><br />
   <button type="submit">Find Area</button>
 </form>
 
@@ -23,7 +23,7 @@
     }
 
     if (empty($_POST["aHeight"])) {
-      echo "Weight value is required<br />";
+      echo "Height value is required<br />";
     } else {
       $height = $_POST['aHeight'];
     }
