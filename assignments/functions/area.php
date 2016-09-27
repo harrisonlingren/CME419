@@ -27,9 +27,8 @@
     } else {
       $height = $_POST['aHeight'];
     }
-
-    $height = ($feet * 12) + $inches;
-    echo "<h3>BMI is: " . getArea($height, $width) . "</h3>";
+    
+    echo "<h3>Area is: " . getArea($height, $width) . "</h3>";
     echo "<br />$htErr<br />$wtErr<br />";
   }
 ?>
