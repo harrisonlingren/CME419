@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>CME419 | Functions</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <?php

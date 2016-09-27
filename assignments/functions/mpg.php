@@ -41,7 +41,7 @@
 <form action="" method="post">
   <label for="miles">Miles Driven</label><input type="text" id="miles" name="miles" /><br />
   <label for="gallons">Gallons of Gas Used</label><input type="text" id="gallons" name="gallons" /><br /><br />
-  <label>Car Efficiency</label>
+  <label>Car Efficiency</label><br />
   <input type="radio" id="bad" <?php echo "selected=" . getBool($mpg, "bad"); ?> /><label for="bad">Bad Efficiency</label><br />
   <input type="radio" id="avg" <?php echo "selected=" . getBool($mpg, "avg"); ?> /><label for="avg">Average Efficiency</label><br />
   <input type="radio" id="good" <?php echo "selected=" . getBool($mpg, "good"); ?> /><label for="good">Good Efficiency</label><br /><br />
