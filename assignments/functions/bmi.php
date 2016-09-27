@@ -1,15 +1,12 @@
 <?php
   function getBmi($h, $w) {
-    $bmi = $weight / ($height * $height) * 703;
+    $bmi = $w / ($h * $h) * 703;
     return $bmi;
   }
 
   $ftErr = "";
   $inErr = "";
   $wtErr = "";
-  $feet = 0;
-  $inches = 0;
-  $weight = 0;
 ?>
 
 <form action="" method="post">
@@ -39,9 +36,7 @@
     }
 
     $height = ($feet * 12) + $inches;
-    echo $ftErr + "\n" + $inErr + "\n" + $wtErr;
-    echo "<br />Feet: $feet, Inches: $inches<br />Total Height: $height<br />Weight: $weight<br />";
-
+    echo "<br />$ftErr<br />$inErr<br />$wtErr<br />";
     echo getBmi($height, $weight);
   }
 ?>
