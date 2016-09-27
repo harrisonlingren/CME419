@@ -3,5 +3,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 form {
+  padding: 10px 20px;
+  margin: 5px auto;
   background-color: grey;
 }
