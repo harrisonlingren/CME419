@@ -4,8 +4,10 @@
     return $bmi;
   }
 
-  $ftErr = $inErr = $wtErr = "";
-  $feet = $inches = $weight = 0;
+  $ftErr = "";
+  $inErr = "";
+  $wtErr = "";
+  //$feet = $inches = $weight = 0;
 ?>
 
 <form action="" method="post">
@@ -36,7 +38,8 @@
 
     $height = ($feet * 12) + $inches;
     echo $ftErr + "\n" + $inErr + "\n" + $wtErr;
-    echo $feet + "\n" + $inches + "\n" + $height + "\n" + $weight;
+    echo "<br />Feet: $feet, Inches: $inches<br />Total Height: $height<br />Weight:$weight"
+
     echo getBmi($height, $weight);
   }
 ?>
