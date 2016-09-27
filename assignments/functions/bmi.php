@@ -36,4 +36,4 @@
   <button type="submit">Calculate BMI</button>
 </form>
 
-<?php echo getBmi($height, $weight) ?>
+<?php echo getBmi($height, $weight); ?>
