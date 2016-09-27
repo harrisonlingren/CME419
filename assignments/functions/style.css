@@ -7,3 +7,6 @@ form {
   margin: 5px auto;
   background-color: grey;
 }
+label {
+  margin-right: 5px;
+}
