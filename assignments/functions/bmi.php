@@ -23,7 +23,7 @@
 
 <form action="" method="post">
   <label>Width</label><input type="text" name="feet" placeholder="feet" value="<?php echo $feet;?>"/><input type="text" name="inches" value="<?php echo $inches;?>"placeholder="inches" /><br />
-  <label>Height</label><input type="text" name="weight" value="<?php echo $weight;?>"/><br /><br />
+  <label>Weight</label><input type="text" name="weight" value="<?php echo $weight;?>"/><br /><br />
   <button type="submit">Calculate BMI</button>
 </form>
 
