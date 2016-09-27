@@ -40,7 +40,7 @@
 
     $height = ($feet * 12) + $inches;
     echo $ftErr + "\n" + $inErr + "\n" + $wtErr;
-    echo "<br />Feet: $feet, Inches: $inches<br />Total Height: $height<br />Weight:$weight"
+    echo "<br />Feet: $feet, Inches: $inches<br />Total Height: $height<br />Weight: $weight";
 
     echo getBmi($height, $weight);
   }
