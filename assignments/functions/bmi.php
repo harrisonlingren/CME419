@@ -13,8 +13,8 @@
 ?>
 
 <form action="" method="post">
-  <label>Width</label><input type="text" id="feet" placeholder="feet" /><input type="text" id="inches" placeholder="inches" /><br />
-  <label>Height</label><input type="text" id="weight" /><br /><br />
+  <label>Width</label><input type="text" name="feet" placeholder="feet" /><input type="text" name="inches" placeholder="inches" /><br />
+  <label>Height</label><input type="text" name="weight" /><br /><br />
   <button type="submit">Calculate BMI</button>
 </form>
 
@@ -40,7 +40,7 @@
 
     $height = ($feet * 12) + $inches;
     echo $ftErr + "\n" + $inErr + "\n" + $wtErr;
-    echo "<br />Feet: $feet, Inches: $inches<br />Total Height: $height<br />Weight: $weight";
+    echo "<br />Feet: $feet, Inches: $inches<br />Total Height: $height<br />Weight: $weight<br />";
 
     echo getBmi($height, $weight);
   }
