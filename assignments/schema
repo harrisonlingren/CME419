@@ -1,0 +1,6 @@
+userid = numeric primary 
+fname, lname = varchar(50) not null
+email = varchar(100) not null
+user = varchar(12) not null
+pass = varchar(16) not null
+regdate = date not null
