@@ -26,5 +26,6 @@ require('db_connect.php');
     This is the Delete Property
   </div>
 
+  <script src="adminForm.js"></script>
 </body>
 </html>
