@@ -1,13 +1,13 @@
 document.getElementById('addDiv').style.display="block";
 document.getElementById('updateDiv').style.display="none";
 document.getElementById('deleteDiv').style.display="none";
-				
+
 var ddValue = document.getElementById('adminChoice');
 ddValue.onchange = newChoice;
-			
+
 function newChoice() {
 	var adminChoice = document.getElementById('adminChoice').value;
-			
+
 	if(adminChoice == "add") {
 		document.getElementById('addDiv').style.display="block";
 		document.getElementById('updateDiv').style.display="none";
@@ -21,4 +21,4 @@ function newChoice() {
 		document.getElementById('addDiv').style.display="none";
 		document.getElementById('updateDiv').style.display="none";
 	}
-	};
+};

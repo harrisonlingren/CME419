@@ -1,9 +1,9 @@
 <?php
 include('header.php');
-include('error_report.php');
+//include('error_report.php');
 require('db_connect.php');
+?>
 
-<!doctype html>
 <html>
 <head></head>
 <body>
@@ -14,8 +14,17 @@ require('db_connect.php');
       <option value="update">Update Property</option>
       <option value="delete">Delete Property</option>
     </select>
-    
   </form>
+
+  <div id="addDiv">
+    This is the Add Property
+  </div>
+  <div id="updateDiv">
+    This is the Update Property
+  </div>
+  <div id="deleteDiv">
+    This is the Delete Property
+  </div>
+
 </body>
 </html>
-?>
