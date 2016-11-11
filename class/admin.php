@@ -32,7 +32,7 @@ require('db_connect.php');
     $populate_query = "select * from location";
     $run_query = mysqli_query($dbc, $populate_query);
 
-    if($check_query) {
+    if($run_query) {
       echo "<table><tr><th>Street Address</th><th>City</th><th>State</th></tr></table>";
       while($row=mysqli_fetch_array($run_query, MYSQLI_ASSOC)) {
         echo '<tr><td>' . $row["street"] . '</td><td>' . $row["city"] . '</td><td>' . $row["state"] . '</td></tr>';
