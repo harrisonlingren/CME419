@@ -41,6 +41,7 @@ require('db_connect.php');
       echo '</table>';
     } else {
       echo $result;
+      echo $dbc;
       echo 'Could not load query: ' . $populate_query;
     }
     ?>
