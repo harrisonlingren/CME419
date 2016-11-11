@@ -4,8 +4,6 @@ include('header.php');
 require('db_connect.php');
 require('states.php');
 ?>
-
-<h1>Rental Properties</h1>
 <h2>Admin Portal</h2>
   <div id="formDiv">
 
