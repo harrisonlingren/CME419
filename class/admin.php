@@ -23,6 +23,8 @@ require('states.php');
   <div id="formDiv">
   </div>
   <div id="tableDiv">
+    <input type="button" value="Add new property" id="addPropertyButton" action="goToForm()" name="addPropertyButton" />
+
     <?php
     if ($dbc) {
       echo "<br />connected!<br />";
