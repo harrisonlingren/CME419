@@ -24,12 +24,12 @@ require('db_connect.php');
 
     <?php
     if ($dbc) {
-      echo "connected!<br />";
+      echo "<br />connected!<br />";
     } else {
-      echo "not connected!<br />";
+      echo "<br />not connected!<br />";
     }
 
-    $populate_query = "SELECT street, city, state FROM location WHERE type_id=1";
+    $populate_query = "SELECT * FROM location";
     $run_query = mysqli_query($dbc, $populate_query);
 
     if($check_query) {
@@ -41,11 +41,9 @@ require('db_connect.php');
       echo '</table>';
     } else {
       echo $result;
-      echo 'Could not load query: ' . $populate_table;
+      echo 'Could not load query: ' . $populate_query;
     }
     ?>
-
-
   </div>
   <div id="deleteDiv">
     This is the Delete Property
