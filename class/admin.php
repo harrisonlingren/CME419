@@ -23,7 +23,7 @@ require('states.php');
   <div id="formDiv">
   </div>
   <div id="tableDiv">
-    <input type="button" value="Add new property" id="addPropertyButton" action="goToForm()" name="addPropertyButton" />
+    <input type="button" value="Add new property" id="addPropertyButton" onclick="goToForm()" name="addPropertyButton" />
 
     <?php
     if ($dbc) {
