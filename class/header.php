@@ -1,7 +1,7 @@
 <html>
 <head>
   <title><?php echo 'Rental Properties'; ?></title>
-  <link href="style.css" type="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
   <header>
