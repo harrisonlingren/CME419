@@ -9,8 +9,8 @@ require('db_connect.php');
   <style>
     table {
       border-collapse: collapse;
-      border: 1px solid black;
     }
+    table
   </style>
 </head>
 <body>
@@ -40,10 +40,10 @@ require('db_connect.php');
     $run_query = mysqli_query($dbc, $populate_query);
 
     if($run_query) {
-      echo "<table><tr><th>Street Address</th><th>City</th><th>State</th></tr>";
+      echo "<table><tr><th>Street Address</th><th>City</th><th>State</th><th></th></tr>";
       while($row=mysqli_fetch_array($run_query, MYSQLI_ASSOC)) {
         echo '<tr><td>' . $row["street"] . '</td><td>' . $row["city"] . '</td><td>' . $row["state"] . '</td>';
-        echo '<td><input type="button" id="' . $row["property_id"] . '" name="property" value=""/></td></tr>';
+        echo '<td><input type="button" id="edit-' . $row["property_id"] . '" name="property" value="Edit"/><input type="button" id="delete-' . $row["property_id"] . '" name="property" value="Delete"/></td></tr>';
       }
       echo '</table>';
     } else {
