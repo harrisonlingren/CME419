@@ -29,7 +29,7 @@ require('db_connect.php');
       echo "<br />not connected!<br />";
     }
 
-    $populate_query = "SELECT * FROM location";
+    $populate_query = "select * from location";
     $run_query = mysqli_query($dbc, $populate_query);
 
     if($check_query) {
