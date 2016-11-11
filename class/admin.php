@@ -10,7 +10,9 @@ require('db_connect.php');
     table {
       border-collapse: collapse;
     }
-    table
+    table, td, th {
+      border: 1px solid black;
+    }
   </style>
 </head>
 <body>
