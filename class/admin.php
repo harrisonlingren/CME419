@@ -5,18 +5,6 @@ require('db_connect.php');
 require('states.php');
 ?>
 
-<html>
-<head>
-  <style>
-    table {
-      border-collapse: collapse;
-    }
-    table, td, th {
-      border: 1px solid black;
-    }
-  </style>
-</head>
-<body>
 <h1>Rental Properties</h1>
 <h2>Admin Portal</h2>
   <div id="formDiv">
@@ -110,7 +98,3 @@ require('states.php');
     }
     ?>
   </div>
-
-  <script src="adminForm.js"></script>
-</body>
-</html>
