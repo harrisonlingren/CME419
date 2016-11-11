@@ -8,6 +8,7 @@
     <h1 class="title">Rental Properties</h1>
     <ul>
       <li><a href="list.php">List</a></li>
+      <li><a href="search.php">Search</a></li>
       <li><a href="admin.php">Administration</a></li>
     </ul>
   </header>
