@@ -29,12 +29,12 @@ require('db_connect.php');
       echo "not connected!<br />";
     }
 
-    $populate_table = "select street, city, state from location where type_id=1";
-    $check_query = mysqli_query($dbc, $populate_table);
+    $populate_query = "SELECT street, city, state FROM location WHERE type_id=1";
+    $run_query = mysqli_query($dbc, $populate_query);
 
     if($check_query) {
       echo "<table><tr><th>Street Address</th><th>City</th><th>State</th></tr></table>";
-      while($row=mysqli_fetch_array($r1, MYSQLI_ASSOC)) {
+      while($row=mysqli_fetch_array($run_query, MYSQLI_ASSOC)) {
         echo '<tr><td>' . $row["street"] . '</td><td>' . $row["city"] . '</td><td>' . $row["state"] . '</td></tr>';
         echo '<td><input type="button" id="' . $row["property_id"] . '" name="property" value=""/></td>';
       }
