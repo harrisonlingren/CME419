@@ -1,24 +1,17 @@
-document.getElementById('addDiv').style.display="block";
-document.getElementById('updateDiv').style.display="none";
-document.getElementById('deleteDiv').style.display="none";
-
-var ddValue = document.getElementById('adminChoice');
-ddValue.onchange = newChoice;
-
-function newChoice() {
-	var adminChoice = document.getElementById('adminChoice').value;
-
-	if(adminChoice == "add") {
-		document.getElementById('addDiv').style.display="block";
-		document.getElementById('updateDiv').style.display="none";
-		document.getElementById('deleteDiv').style.display="none";
-	} else if(adminChoice=="update") {
-		document.getElementById('updateDiv').style.display="block";
-		document.getElementById('addDiv').style.display="none";
-		document.getElementById('deleteDiv').style.display="none";
-	} else {
-		document.getElementById('deleteDiv').style.display="block";
-		document.getElementById('addDiv').style.display="none";
-		document.getElementById('updateDiv').style.display="none";
-	}
+function goToForm() {
+	document.getElementById('formDiv').style.display="block";
+	document.getElementById('tableDiv').style.display="none";
 };
+
+function goToTable() {
+	document.getElementById('formDiv').style.display="none";
+	document.getElementById('tableDiv').style.display="block";
+}
+
+goToTable();
+
+/*
+I also changed this code a bit to reflect the changes in the other file. Most
+of it should be pretty standard, but feel free to let me know if you have any
+feedback or questions as you're working through it.
+*/

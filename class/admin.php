@@ -2,6 +2,7 @@
 include('header.php');
 //include('error_report.php');
 require('db_connect.php');
+require('states.php');
 ?>
 
 <html>
@@ -16,21 +17,12 @@ require('db_connect.php');
   </style>
 </head>
 <body>
-  <form>
-    <p>What would you like to do?</p>
-    <select id="adminChoice">
-      <option value="add">Add Property</option>
-      <option value="update">Update Property</option>
-      <option value="delete">Delete Property</option>
-    </select>
-  </form>
+<h1>Rental Properties</h1>
+<h2>Admin Portal</h2>
 
-  <div id="addDiv">
-    This is the Add Property
+  <div id="formDiv">
   </div>
-  <div id="updateDiv">
-    This is the Update Property
-
+  <div id="tableDiv">
     <?php
     if ($dbc) {
       echo "<br />connected!<br />";
@@ -53,9 +45,6 @@ require('db_connect.php');
       echo 'Could not load query: ' . $populate_query;
     }
     ?>
-  </div>
-  <div id="deleteDiv">
-    This is the Delete Property
   </div>
 
   <script src="adminForm.js"></script>
