@@ -91,7 +91,7 @@ require('states.php');
       $run_query = mysqli_query($dbc, $populate_query);
 
       if($run_query) {
-        echo '<form action="update_property.php" method="get">
+        echo '<form action="update_property.php" method="post">
         <input type="submit" value="Update selected property" id="updateSubmit"/>
         <table><tr><th>Update?</th><th>Street Address</th><th>City</th><th>State</th></tr>';
         while($row=mysqli_fetch_array($run_query, MYSQLI_ASSOC)) {

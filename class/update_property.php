@@ -4,7 +4,7 @@ include('header.php');
 require('db_connect.php');
 require('states.php');
 
-$prop = $_POST['property_id'];
+$prop = $_POST['updateID'];
 echo "<h3>ID: $prop</h3>";
 ?>
 
