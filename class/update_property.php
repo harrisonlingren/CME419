@@ -14,6 +14,12 @@ echo "<h3>ID: $prop</h3>";
   <?php
     $get_loc_data = "select distinct location.street, location.city, school.zip, school.county from location left join school on (location.zip = school.zip) where type_id = 0 and location.property_id = $prop";
     $loc_data_query = mysqli_query($dbc, $get_loc_data);
+
+    if ($loc_data_query) {
+      $loc_data = mysqli_fetch_array($loc_data_query, MYSQLI_ASSOC);
+    } else {
+      echo "Could not fetch data for query: $loc_data_query";
+    }
   ?>
   <fieldset>
     <legend>Property Information</legend>
