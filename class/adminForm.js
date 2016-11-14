@@ -1,14 +1,3 @@
-document.getElementById('actionDropdown')
-	.addEventListener("change", function(action) {
-		if (action==="add") {
-			addProperty();
-		} else if (action==="update") {
-			updateProperty();
-		} else if (action==="delete") {
-			deleteProperty();
-		}
-	}(document.getElementById('actionDropdown').value));
-
 function addProperty() {
 	document.getElementById('addDiv').style.display="block";
 	document.getElementById('updateDiv').style.display="none";
@@ -26,5 +15,16 @@ function deleteProperty() {
 	document.getElementById('updateDiv').style.display="none";
 	document.getElementById('deleteDiv').style.display="block";
 }
+
+var ddValue = document.getElementById('adminChoice');
+ddValue.onchange = function(adminChoice) {
+	if (adminChoice==="add") {
+		addProperty();
+	} else if (adminChoice==="update") {
+		updateProperty();
+	} else if (adminChoice==="delete") {
+		deleteProperty();
+	}
+}(ddValue.value);
 
 updateProperty();
