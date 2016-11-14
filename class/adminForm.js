@@ -1,5 +1,5 @@
 var choice = document.getElementById('actionDropdown');
-choice.on("change", function(action) {
+choice.addEventListener("onchange", function(action) {
 	if (action==="add") {
 		addProperty();
 	} else if (action==="update") {
