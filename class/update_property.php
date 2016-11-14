@@ -141,6 +141,7 @@ echo "<h3>ID: $prop</h3>";
     <input type="date" id="availDate" name="availDate" required value="<?php echo $rent_data['availability']; ?>"/><br/>
   </fieldset>
 
+  <input type="hidden" name="updateID" value="<?php echo $prop; ?>" />
   <input type="submit" value="Update Property" name="updateSubmit" id="updateSubmit"/>
   <input type="button" value="Cancel" id="cancelButton" name="cancelButton" onclick="leavePage()" />
 </form>
