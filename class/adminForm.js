@@ -1,5 +1,5 @@
 var choice = document.getElementById('actionDropdown');
-choice.on("change", function(choice.value) {
+choice.on("change", function(action) {
 	if (action==="add") {
 		addProperty();
 	} else if (action==="update") {
@@ -7,7 +7,7 @@ choice.on("change", function(choice.value) {
 	} else if (action==="delete") {
 		deleteProperty();
 	}
-});
+}(choice.value));
 
 function addProperty() {
 	document.getElementById('addDiv').style.display="block";
