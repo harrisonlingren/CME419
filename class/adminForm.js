@@ -7,7 +7,7 @@ document.getElementById('actionDropdown')
 		} else if (action==="delete") {
 			deleteProperty();
 		}
-	}(choice.value));
+	}(document.getElementById('actionDropdown').value));
 
 function addProperty() {
 	document.getElementById('addDiv').style.display="block";
