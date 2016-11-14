@@ -16,8 +16,9 @@ function deleteProperty() {
 	document.getElementById('deleteDiv').style.display="block";
 }
 
-var ddValue = document.getElementById('actionDropdown');
-ddValue.onchange = function(adminChoice) {
+function newChoice() {
+	var adminChoice = document.getElementById('adminChoice').value;
+
 	if (adminChoice==="add") {
 		addProperty();
 	} else if (adminChoice==="update") {
@@ -25,6 +26,8 @@ ddValue.onchange = function(adminChoice) {
 	} else if (adminChoice==="delete") {
 		deleteProperty();
 	}
-}(ddValue.value);
+};
 
+var ddValue = document.getElementById('actionDropdown');
+ddValue.onchange = newChoice;
 updateProperty();
