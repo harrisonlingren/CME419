@@ -84,7 +84,7 @@ echo "<h3>ID: $prop</h3>";
     <label for="addAmenities">Amenities:</label>
     <textarea id="addAmenities" name="addAmenities"><?php echo $prop_data['amenities']; ?></textarea><br/>
     <label for="addDesc">Description:</label>
-    <textarea id="addDesc" name="addDesc"><?php echo $prop_data['garage']; ?></textarea><br/>
+    <textarea id="addDesc" name="addDesc"><?php echo $prop_data['desc']; ?></textarea><br/>
   </fieldset>
 
   <!-- School fields -->
@@ -136,11 +136,6 @@ echo "<h3>ID: $prop</h3>";
         <label for="leased">Leased</label><br/>';
       }
     ?>
-
-    <input type="radio" id="available" name="rentStatus" value="0" required/>
-    <label for="available">Available</label>
-    <input type="radio" id="leased" name="rentStatus" value="1"/>
-    <label for="leased">Leased</label><br/>
 
     <label for="availDate">Available Date:</label>
     <input type="date" id="availDate" name="availDate" required value="<?php echo $rent_data['availability']; ?>"/><br/>

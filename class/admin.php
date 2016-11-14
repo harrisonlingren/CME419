@@ -10,7 +10,7 @@ require('states.php');
 <label for="actionDropdown">Action:</label>
 <select id="actionDropdown">
   <option value="add">Add Property</option>
-  <option value="update">Update Property</option>
+  <option value="update" checked>Update Property</option>
   <option value="delete">Delete Property</option>
 </select>
 
