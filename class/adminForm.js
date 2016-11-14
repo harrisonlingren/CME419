@@ -1,13 +1,13 @@
-var choice = document.getElementById('actionDropdown');
-choice.addEventListener("onchange", function(action) {
-	if (action==="add") {
-		addProperty();
-	} else if (action==="update") {
-		updateProperty();
-	} else if (action==="delete") {
-		deleteProperty();
-	}
-}(choice.value));
+document.getElementById('actionDropdown')
+	.addEventListener("onchange", function(action) {
+		if (action==="add") {
+			addProperty();
+		} else if (action==="update") {
+			updateProperty();
+		} else if (action==="delete") {
+			deleteProperty();
+		}
+	}(choice.value));
 
 function addProperty() {
 	document.getElementById('addDiv').style.display="block";
