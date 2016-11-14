@@ -1,14 +1,22 @@
-function goToForm() {
-	document.getElementById('formDiv').style.display="block";
-	document.getElementById('tableDiv').style.display="none";
+function addProperty() {
+	document.getElementById('addDiv').style.display="block";
+	document.getElementById('updateDiv').style.display="none";
+	document.getElementById('deleteDiv').style.display="none";
 };
 
-function goToTable() {
-	document.getElementById('formDiv').style.display="none";
-	document.getElementById('tableDiv').style.display="block";
+function updateProperty() {
+	document.getElementById('addDiv').style.display="none";
+	document.getElementById('updateDiv').style.display="block";
+	document.getElementById('deleteDiv').style.display="none";
 }
 
-goToTable();
+function deleteProperty() {
+	document.getElementById('addDiv').style.display="none";
+	document.getElementById('updateDiv').style.display="none";
+	document.getElementById('deleteDiv').style.display="block";
+}
+
+updateProperty();
 
 /*
 I also changed this code a bit to reflect the changes in the other file. Most
