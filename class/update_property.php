@@ -12,22 +12,8 @@ echo "<h3>ID: $prop</h3>";
 <h2>Admin Portal</h2>
 <form method="POST" action="update_submit.php">
   <?php
-
-    if ($dbc) {
-      echo "<br />connected!<br />";
-    } else {
-      echo "<br />not connected!<br />";
-    }
-
     $get_loc_data = "select distinct location.street, location.city, school.zip, school.county from location left join school on (location.zip = school.zip) where type_id = 0 and location.property_id = $prop";
     $loc_data_query = mysqli_query($dbc, $get_loc_data);
-
-    if ($loc_data_query) {
-      $loc_data = mysqli_fetch_array($loc_data_query, MYSQLI_ASSOC);
-    } else {
-      echo "Could not fetch data for query: $loc_data_query";
-    }
-
   ?>
   <fieldset>
     <legend>Property Information</legend>
@@ -56,26 +42,40 @@ echo "<h3>ID: $prop</h3>";
   <?php
     $get_prop_data = "select bed, bath, garage, pets, amenities, details.desc from res_info inner join details using (property_id) where res_info.property_id = $prop";
     $prop_data_query = mysqli_query($dbc, $get_prop_data);
-    $prop_data = mysqli_fetch_array($prop_data_query, MYSQLI_ASSOC);
+
+    if ($prop_data_query) {
+      $prop_data = mysqli_fetch_array($prop_data_query, MYSQLI_ASSOC);
+    } else {
+      echo "Could not fetch data for query: $prop_data_query";
+    }
   ?>
   <fieldset>
     <legend>Property Details</legend>
     <input type="hidden" name="addType" value="residential" required/><br/>
     <label for="addBed">Bed:</label>
-    <input type="number" id="addBed" required/><br/>
+    <input type="number" id="addBed" required value="<?php echo $prop_data['bed']; ?>"/><br/>
     <label for="addBath">Bath:</label>
-    <input type="number" id="addBath" name="addBath" required/><br/>
+    <input type="number" id="addBath" name="addBath" required value="<?php echo $prop_data['bath']; ?>"/><br/>
     <label for="addGarage">Garage:</label>
-    <input type="text" id="addGarage" name="addGarage" required/><br/>
+    <input type="text" id="addGarage" name="addGarage" required value="<?php echo $prop_data['garage']; ?>"/><br/>
     <label>Are pets allowed?</label>
-    <input type="radio" id="noPets" name="addPets" value="0" required/>
-    <label for="noPets">No</label>
-    <input type="radio" id="yesPets" name="addPets" value="1" required/>
-    <label for="yesPets">Yes</label><br/>
+    <?php
+      if ($prop_data['pets']) {
+        echo '<input type="radio" id="noPets" name="addPets" value="0" required />
+        <label for="noPets">No</label>
+        <input type="radio" id="yesPets" name="addPets" value="1" required checked/>
+        <label for="yesPets">Yes</label><br/>';
+      } else {
+        echo '<input type="radio" id="noPets" name="addPets" value="0" required checked />
+        <label for="noPets">No</label>
+        <input type="radio" id="yesPets" name="addPets" value="1" required />
+        <label for="yesPets">Yes</label><br/>';
+      }
+    ?>
     <label for="addAmenities">Amenities:</label>
-    <textarea id="addAmenities" name="addAmenities"></textarea><br/>
+    <textarea id="addAmenities" name="addAmenities"><?php echo $prop_data['amenities']; ?></textarea><br/>
     <label for="addDesc">Description:</label>
-    <textarea id="addDesc" name="addDesc"></textarea><br/>
+    <textarea id="addDesc" name="addDesc"><?php echo $prop_data['garage']; ?></textarea><br/>
   </fieldset>
 
   <?php
