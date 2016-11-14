@@ -16,7 +16,7 @@ function deleteProperty() {
 	document.getElementById('deleteDiv').style.display="block";
 }
 
-var ddValue = document.getElementById('adminChoice');
+var ddValue = document.getElementById('actionDropdown');
 ddValue.onchange = function(adminChoice) {
 	if (adminChoice==="add") {
 		addProperty();
