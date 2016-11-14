@@ -88,7 +88,7 @@ require('states.php');
           <input type="submit" value="Update selected property" id="updateSubmit"/>
           <table><tr><th>Update?</th><th>Street Address</th><th>City</th><th>State</th></tr>';
           while($row=mysqli_fetch_array($run_query, MYSQLI_ASSOC)) {
-            echo '<tr><td><input type="radio" name="updateID" id="' . $prop . '" value="' . $prop . '" /></td>';
+            echo '<tr><td><input type="radio" name="updateID" id="' . $row['property_id'] . '" value="' . $row['property_id'] . '" /></td>';
             echo '<td>' . $row["street"] . '</td><td>' . $row["city"] . '</td><td>' . $row["state"] . '</td></tr>';
           }
           echo '</table></form>';
