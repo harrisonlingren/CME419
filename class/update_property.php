@@ -19,7 +19,7 @@ echo "<h3>ID: $prop</h3>";
       echo "<br />not connected!<br />";
     }
 
-    $get_loc_data = "select street, city, state, zip, county from location inner join school using (property_id) where location.property_id = $prop";
+    $get_loc_data = "select distinct location.street, location.city, school.zip, school.county from location left join school on (location.zip = school.zip) where type_id = 0 and location.property_id = $prop;
     $loc_data_query = mysqli_query($dbc, $get_loc_data);
 
     if ($loc_data_query) {
@@ -54,7 +54,7 @@ echo "<h3>ID: $prop</h3>";
   </fieldset>
 
   <?php
-    $get_prop_data = "select bed, bath, garage, pets, amenities, desc from res_info inner join details using (property_id) where res_info.property_id = $prop";
+    $get_prop_data = "select bed, bath, garage, pets, amenities, details.desc from res_info inner join details using (property_id) where res_info.property_id = $prop";
     $prop_data_query = mysqli_query($dbc, $get_prop_data);
     $prop_data = mysqli_fetch_array($prop_data_query, MYSQLI_ASSOC);
   ?>
@@ -94,7 +94,7 @@ echo "<h3>ID: $prop</h3>";
   </fieldset>
 
   <?php
-    $get_rent_data = "select street, city, state, zip, county from location inner join school using (property_id) where location.property_id = $prop";
+    $get_rent_data = "select rent, availability, status from rent where property_id = $prop";
     $rent_data_query = mysqli_query($dbc, $get_rent_data);
     $rent_data = mysqli_fetch_array($rent_data_query, MYSQLI_ASSOC);
   ?>
