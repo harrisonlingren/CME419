@@ -17,7 +17,7 @@ function deleteProperty() {
 }
 
 function newChoice() {
-	var adminChoice = document.getElementById('adminChoice').value;
+	var adminChoice = document.getElementById('actionDropdown').value;
 
 	if (adminChoice==="add") {
 		addProperty();
