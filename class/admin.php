@@ -5,6 +5,15 @@ require('db_connect.php');
 require('states.php');
 ?>
 <h2>Admin Portal</h2>
+
+
+<label for="actionDropdown">Action:</label>
+<select id="actionDropdown">
+  <option value="add">Add Property</option>
+  <option value="update">Update Property</option>
+  <option value="delete">Delete Property</option>
+</select>
+
   <div id="addFormDiv">
     <form method="post" action="adminFormSubmit.php">
       <fieldset>

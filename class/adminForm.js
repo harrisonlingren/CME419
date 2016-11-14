@@ -1,3 +1,14 @@
+var choice = document.getElementById('actionDropdown');
+choice.on("change", function(choice.value) {
+	if (action==="add") {
+		addProperty();
+	} else if (action==="update") {
+		updateProperty();
+	} else if (action==="delete") {
+		deleteProperty();
+	}
+});
+
 function addProperty() {
 	document.getElementById('addDiv').style.display="block";
 	document.getElementById('updateDiv').style.display="none";
@@ -17,9 +28,3 @@ function deleteProperty() {
 }
 
 updateProperty();
-
-/*
-I also changed this code a bit to reflect the changes in the other file. Most
-of it should be pretty standard, but feel free to let me know if you have any
-feedback or questions as you're working through it.
-*/
