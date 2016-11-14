@@ -14,7 +14,7 @@ require('states.php');
   <option value="delete">Delete Property</option>
 </select>
 
-  <div id="addFormDiv">
+  <div id="addDiv">
     <form method="post" action="adminFormSubmit.php">
       <fieldset>
         <legend>Property Information</legend>
@@ -78,7 +78,6 @@ require('states.php');
     </form>
   </div>
 
-
   <div id="updateDiv">
 
     <div id="tableDiv">
@@ -107,6 +106,10 @@ require('states.php');
         }
       ?>
     </div>
+  </div>
+
+  <div id="deleteDiv">
+    
   </div>
 
 <?php include('footer.php'); ?>
