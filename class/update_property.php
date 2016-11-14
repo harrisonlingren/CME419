@@ -1,12 +1,33 @@
 <?php
-  $prop = $_POST['property_id'];
+include('header.php');
+//include('error_report.php');
+require('db_connect.php');
+require('states.php');
+
+$prop = $_POST['property_id'];
+echo "<h3>ID: $prop</h3>";
 ?>
 
+
+<h2>Admin Portal</h2>
 <form method="POST" action="update_submit.php">
   <?php
+
+    if ($dbc) {
+      echo "<br />connected!<br />";
+    } else {
+      echo "<br />not connected!<br />";
+    }
+
     $get_loc_data = "select street, city, state, zip, county from location inner join school using (property_id) where location.property_id = $prop";
     $loc_data_query = mysqli_query($dbc, $get_loc_data);
-    $loc_data = mysqli_fetch_array($loc_data_query, MYSQLI_ASSOC);
+
+    if ($loc_data_query) {
+      $loc_data = mysqli_fetch_array($loc_data_query, MYSQLI_ASSOC);
+    } else {
+      echo "Could not fetch data for query: $loc_data_query";
+    }
+
   ?>
   <fieldset>
     <legend>Property Information</legend>
@@ -100,3 +121,5 @@
     }
   }
 </script>
+
+<?php include('footer.php'); ?>
