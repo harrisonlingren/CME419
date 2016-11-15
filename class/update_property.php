@@ -14,7 +14,7 @@ echo "<h3>ID: $prop</h3>";
 
   <!-- Location fields -->
   <?php
-    $get_loc_data = "select distinct location.street, location.city, school.zip, school.county from location left join school on (location.zip = school.zip) where type_id = 0 and location.property_id = $prop";
+    $get_loc_data = "select street, city, zip, county from location inner join school using (property_id) where type_id = 0 and location.property_id = $prop";
     $loc_data_query = mysqli_query($dbc, $get_loc_data);
 
     if ($loc_data_query) {
@@ -89,7 +89,7 @@ echo "<h3>ID: $prop</h3>";
 
   <!-- School fields -->
   <?php
-    $get_school_data = "select elementary, middle, high from school where location.property_id = $prop";
+    $get_school_data = "select elementary, middle, high from school where property_id = $prop";
     $school_data_query = mysqli_query($dbc, $get_school_data);
     if ($school_data_query) {
       $school_data = mysqli_fetch_array($school_data_query, MYSQLI_ASSOC);
