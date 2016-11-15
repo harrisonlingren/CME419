@@ -7,7 +7,6 @@ $state = $_POST['addState'];
 $zip = $_POST['addZip'];
 $beds = $_POST['addBed'];
 $bath = $_POST['updateID'];
-echo $beds;
 $garage = $_POST['addGarage'];
 $pets = $_POST['addPets'];
 $rent = $_POST['rent'];
