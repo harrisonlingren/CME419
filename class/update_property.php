@@ -30,7 +30,7 @@ echo "<h3>ID: $prop</h3>";
     <label for "addCity">City:</label>
     <input type="text" id="addCity" name="addCity" required value="<?php echo $loc_data['city']; ?>"/><br/>
     <label for="addState">State:</label>
-    <select name="states" required>
+    <select name="addState" required>
       <?php
         foreach($states as $key => $value) {
           if ($key == $loc_data['state']) {
@@ -65,8 +65,19 @@ echo "<h3>ID: $prop</h3>";
     <input type="number" id="addBed" required value="<?php echo $prop_data['bed']; ?>"/><br/>
     <label for="addBath">Bath:</label>
     <input type="number" id="addBath" name="addBath" required value="<?php echo $prop_data['bath']; ?>"/><br/>
-    <label for="addGarage">Garage:</label>
-    <input type="text" id="addGarage" name="addGarage" required value="<?php echo $prop_data['garage']; ?>"/><br/>
+    <?php
+      if ($prop_data['garage'] == 1) {
+        echo '<input type="radio" id="noGarage" name="addGarage" value="0" required />
+        <label for="noGarage">No</label>
+        <input type="radio" id="yesGarage" name="addGarage" value="1" required checked/>
+        <label for="yesGarage">Yes</label><br/>';
+      } else {
+        echo '<input type="radio" id="noGarage" name="addGarage" value="0" required checked />
+        <label for="noGarage">No</label>
+        <input type="radio" id="yesGarage" name="addGarage" value="1" required />
+        <label for="yesGarage">Yes</label><br/>';
+      }
+    ?>
     <label>Are pets allowed?</label>
     <?php
       if ($prop_data['pets'] == 1) {
