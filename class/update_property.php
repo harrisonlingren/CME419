@@ -30,9 +30,10 @@ echo "<h3>ID: $prop</h3>";
     <label for "addCity">City:</label>
     <input type="text" id="addCity" name="addCity" required value="<?php echo $loc_data['city']; ?>"/><br/>
     <label for="addState">State:</label>
-    <select name="addState" required>
+    <select name="addState" id="addState" required>
       <?php
         foreach($states as $key => $value) {
+          echo $key . ": " . ($key == $loc_data['state']);
           if ($key == $loc_data['state']) {
             echo '<option value="' . $key . '" selected="selected">' . $value . '</option>';
           } else {
