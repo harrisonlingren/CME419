@@ -11,8 +11,9 @@ $garage = $_POST['addGarage'];
 $pets = $_POST['addPets'];
 $rent = $_POST['rent'];
 $availability = $_POST['availDate'];
-$status = $_POST['rentStatus']
-
+$status = $_POST['rentStatus'];
+$amenities = $_POST['addAmenities'];
+$desc = $_POST['addDesc'];
 
 $update_location = "UPDATE location SET street='$street', city='$city', state='$state', zip='$zip' WHERE property_id = $prop";
 $update_property = "UPDATE res_info SET bed='$bed', bath='$bath', garage='$garage', pets='$pets'";
