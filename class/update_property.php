@@ -33,7 +33,7 @@ echo "<h3>ID: $prop</h3>";
     <select name="addState" id="addState" required>
       <?php
         foreach($states as $key => $value) {
-          echo $key . ": " . ($key == $loc_data['state']);
+          echo $key . ": " . $loc_data;
           if ($key == $loc_data['state']) {
             echo '<option value="' . $key . '" selected="selected">' . $value . '</option>';
           } else {
