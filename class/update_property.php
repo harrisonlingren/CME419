@@ -65,6 +65,7 @@ echo "<h3>ID: $prop</h3>";
     <input type="number" id="addBed" required value="<?php echo $prop_data['bed']; ?>"/><br/>
     <label for="addBath">Bath:</label>
     <input type="number" id="addBath" name="addBath" required value="<?php echo $prop_data['bath']; ?>"/><br/>
+    <label for="addGarage">Garage:</label>
     <?php
       if ($prop_data['garage'] == 1) {
         echo '<input type="radio" id="noGarage" name="addGarage" value="0" required />
