@@ -14,7 +14,7 @@ echo "<h3>ID: $prop</h3>";
 
   <!-- Location fields -->
   <?php
-    $get_loc_data = "select street, city, zip, county from location inner join school using (property_id) where type_id = 0 and location.property_id = $prop";
+    $get_loc_data = "select street, city, zip, county, state from location inner join school using (property_id) where type_id = 0 and location.property_id = $prop";
     $loc_data_query = mysqli_query($dbc, $get_loc_data);
 
     if ($loc_data_query) {
@@ -33,7 +33,6 @@ echo "<h3>ID: $prop</h3>";
     <select name="addState" id="addState" required>
       <?php
         foreach($states as $key => $value) {
-          echo $key . ": " . $loc_data['state'];
           if ($key == $loc_data['state']) {
             echo '<option value="' . $key . '" selected="selected">' . $value . '</option>';
           } else {
