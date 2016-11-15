@@ -34,9 +34,9 @@ echo "<h3>ID: $prop</h3>";
       <?php
         foreach($states as $key => $value) {
           if ($key == $loc_data['state']) {
-            echo "<option value='$key' selected>$value</option>";
+            echo '<option value="' . $key . '" selected="selected">' . $value . '</option>';
           } else {
-            echo "<option value='$key'>$value</option>";
+            echo '<option value="' . $key . '">' . $value . '</option>';
           }
         }
       ?>
