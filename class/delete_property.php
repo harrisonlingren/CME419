@@ -7,7 +7,7 @@
   $get_delete_query = "select street, city, state, zip FROM location where property_id = $prop";
   $get_delete_rows = mysqli_query($dbc, $get_delete_query);
 
-  if ($delete_data) {
+  if ($get_delete_rows) {
     $delete_data = mysqli_fetch_array($get_delete_rows, MYSQLI_ASSOC);
   }
 ?>
