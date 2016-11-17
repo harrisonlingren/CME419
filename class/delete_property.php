@@ -13,7 +13,7 @@
 ?>
 
 <p>You have selected to delete the following property:</p>
-<?php echo '<h3>' . $delete_data["street"] . ',' . $delete_data["city"] . ',' . $delete_data["state"] . $delete_data["zip"] . '</h3>'; ?>
+<?php echo '<h3>' . $delete_data["street"] . ', ' . $delete_data["city"] . ', ' . $delete_data["state"] . ', ' . $delete_data["zip"] . '</h3>'; ?>
 <form action="delete_submit.php" method="post">
   <input type="hidden" name="updateID" value="<?php echo $prop; ?>" />
   <input type="submit" name="deleteButton" id="deleteButton" />
