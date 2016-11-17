@@ -26,7 +26,7 @@
   if ($flag) {
     mysqli_commit($dbc);
   } else {
-    echo "Property #$prop could not be deleted. Please see your administrator for assistance.";
+    echo "<br /><hr /><br />Property #$prop could not be deleted. Please see your administrator for assistance.";
   }
 
 ?>
