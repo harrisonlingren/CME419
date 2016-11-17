@@ -28,6 +28,7 @@ echo $update_property . '<br />';
 echo $update_rental . '<br />';
 echo $update_details . '<br />';
 
+mysqli_autocommit($dbc, false);
 mysqli_begin_transaction($dbc, MYSQL_TRANS_START_READ_ONLY);
 mysqli_query($dbc, $update_location);
 mysqli_query($dbc, $update_property);
