@@ -1,6 +1,6 @@
 <?php
   include('header.php');
-  //include('error_report.php');
+  include('error_report.php');
   require('db_connect.php');
 
   $prop = $_POST['updateID'];
@@ -25,9 +25,10 @@
   }
 
   if ($flag) {
-    mysqli_commit($dbc);
+    if (mysqli_commit($dbc)) {
+      echo "<br /><hr /><br /><h3>Success!</h3>";
+    }
   } else {
-    echo "<br /><hr /><br />Property #$prop could not be deleted. Please see your administrator for assistance.";
+    echo "<br /><hr /><br /><h3>Property #$prop could not be deleted. Please see your administrator for assistance.</h3>";
   }
-
 ?>
