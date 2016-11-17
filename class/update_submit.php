@@ -23,6 +23,19 @@ $update_details = "UPDATE details SET amenities='$amenities', details.desc='$des
 echo $update_location . '<br />';
 echo $update_property . '<br />';
 echo $update_rental . '<br />';
-echo $update_details;
+echo $update_details . '<br />';
+
+mysqli_begin_transaction($dbc, MYSQL_TRANS_START_READ_ONLY);
+mysqli_query($dbc, $update_location);
+mysqli_query($dbc, $update_property);
+mysqli_query($dbc, $update_rental);
+mysqli_query($dbc, $update_details);
+
+$result = $mysqli_commit($dbc);
+if ($result) {
+  echo $result . ": transaction succeeded!";
+} else {
+  echo $result . ": transaction failed.";
+}
 
 ?>
