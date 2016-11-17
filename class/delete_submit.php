@@ -19,7 +19,7 @@
     $run_delete = mysqli_query($dbc, $query);
     if (!$run_delete) {
       $flag = false;
-      echo "Error on table $table! Details below:<br /><br />" . mysqli_error($dbc);
+      echo "<br /><br />Error on table $table! Details below:<br /><br />" . mysqli_error($dbc);
     }
   }
 
