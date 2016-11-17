@@ -7,7 +7,6 @@
   $flag = TRUE;
 
   mysqli_autocommit($dbc, false);
-  mysqli_begin_transaction($dbc, MYSQL_TRANS_START_READ_ONLY);
 
   $delete_queries = array();
   $delete_queries['location'] = "delete from location where property_id = $prop";
