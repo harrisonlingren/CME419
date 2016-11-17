@@ -62,7 +62,7 @@ echo "<h3>ID: $prop</h3>";
     <legend>Property Details</legend>
     <input type="hidden" name="addType" value="residential" required/><br/>
     <label for="addBed">Bed:</label>
-    <input type="number" id="addBed" value="<?php echo $prop_data['bed']; ?>" required/><br/>
+    <input type="number" id="addBed" name="addBed" value="<?php echo $prop_data['bed']; ?>" required/><br/>
     <label for="addBath">Bath:</label>
     <input type="number" id="addBath" name="addBath" required value="<?php echo $prop_data['bath']; ?>"/><br/>
     <label for="addGarage">Garage:</label>
