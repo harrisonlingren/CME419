@@ -26,7 +26,7 @@
 
 <?php
 
-	if (_SERVER['REQUEST_METHOD'] == 'POST') {
+	if(_SERVER['REQUEST_METHOD'] == 'POST') {
 		echo '<script>alert("It works");</script>';
 	} else {
 		echo '<script>alert("It does not work");</script>';
