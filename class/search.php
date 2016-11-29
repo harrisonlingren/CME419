@@ -1,7 +1,7 @@
 <?php
-	include('header.html');
+	include('header.php');
 	include('error_report.php');
-	require('dbConnect.php');
+	require('db_connect.php');
 	?>
 
 <form action="search.php" method="post">
@@ -33,6 +33,7 @@
 	}
 
 // While Result loop
+/*
 			while($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
 				echo '<div class="propertyBox"><h1>' . $row['street'] . ', ' . $row['city'] . ', ' . $row['state'] . '  ' . $row['zip'] . '</h1><br/>';
 				echo '<div class="rentTable"><h3>Rent:</h3><p>$' . $row['rent'] . '/month</p><h3>Available Date:</h3><p>';
@@ -60,5 +61,6 @@
 
 				}
 
-
-	?>
+*/
+include('footer.php');
+?>
