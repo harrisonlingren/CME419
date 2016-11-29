@@ -74,7 +74,7 @@ require('states.php');
       <input type="date" id="availDate" name="availDate" required/><br/>
     </fieldset>
     <input type="submit" value="Add Property" name="addSubmit" id="addSubmit"/>
-    <input type="button" value="Cancel" id="cancelButton" name="cancelButton" onclick="goToTable()" />
+    <input type="button" value="Cancel" id="cancelButton" name="cancelButton" onclick="leavePage()" />
   </form>
 </div>
 
@@ -135,5 +135,13 @@ require('states.php');
     ?>
   </div>
 </div>
+
+<script>
+  function leavePage() {
+    if (confirm("Are you sure you want to leave without saving?")) {
+      updateProperty();
+    }
+  }
+</script>
 
 <?php include('footer.php'); ?>
