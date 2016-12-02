@@ -72,8 +72,8 @@
 
 
 // While Result loop
-	$search_query = mysqli_query($dbc, $search_query);
-	while($row=mysqli_fetch_array($searchQ, MYSQLI_ASSOC)) {
+	$search_query = mysqli_query($dbc, $searchQ);
+	while($row=mysqli_fetch_array($search_query, MYSQLI_ASSOC)) {
 		echo '<div class="propertyBox"><h1>' . $row['street'] . ', ' . $row['city'] . ', ' . $row['state'] . '  ' . $row['zip'] . '</h1><br/>';
 		echo '<div class="rentTable"><h3>Rent:</h3><p>$' . $row['rent'] . '/month</p><h3>Available Date:</h3><p>';
 
