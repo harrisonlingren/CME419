@@ -26,7 +26,7 @@
 
 <?php
 
-	if(_SERVER['REQUEST_METHOD'] == 'POST') {
+	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		echo "Form was submitted.";
 		$bed=$_POST['bed'];
 		$bath=$_POST['bed'];
