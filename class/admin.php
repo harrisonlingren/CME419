@@ -15,7 +15,7 @@ require('states.php');
 </select>
 
 <div id="addDiv">
-  <form method="post" action="adminFormSubmit.php">
+  <form method="post" action="add_submit.php">
     <fieldset>
       <legend>Property Information</legend>
       <label for="addStreet">Street:</label>
