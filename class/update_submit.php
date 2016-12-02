@@ -9,7 +9,7 @@ $city = $_POST['addCity'];
 $state = $_POST['addState'];
 $zip = $_POST['addZip'];
 $beds = $_POST['addBed'];
-$bath = $_POST['updateID'];
+$bath = $_POST['addBath'];
 $garage = $_POST['addGarage'];
 $pets = $_POST['addPets'];
 $rent = $_POST['rent'];
@@ -22,7 +22,6 @@ $middle = $_POST['middle'];
 $high = $_POST['high'];
 $county = $_POST['addCounty'];
 
-$prop = $_POST['updateID'];
 $flag = TRUE;
 mysqli_autocommit($dbc, false);
 
