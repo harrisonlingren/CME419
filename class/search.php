@@ -73,35 +73,37 @@
 
 // While Result loop
 	$search_query = mysqli_query($dbc, $searchQ);
-	while($row=mysqli_fetch_array($search_query, MYSQLI_ASSOC)) {
-		echo '<div class="propertyBox"><h1>' . $row['street'] . ', ' . $row['city'] . ', ' . $row['state'] . '  ' . $row['zip'] . '</h1><br/>';
-		echo '<div class="rentTable"><h3>Rent:</h3><p>$' . $row['rent'] . '/month</p><h3>Available Date:</h3><p>';
+	if($search_query) {
+		while($row=mysqli_fetch_array($search_query, MYSQLI_ASSOC)) {
+			echo '<div class="propertyBox"><h1>' . $row['street'] . ', ' . $row['city'] . ', ' . $row['state'] . '  ' . $row['zip'] . '</h1><br/>';
+			echo '<div class="rentTable"><h3>Rent:</h3><p>$' . $row['rent'] . '/month</p><h3>Available Date:</h3><p>';
 
-		if($row['availableDate']=='0000-00-00') {
-			echo '<i>Not available</i>';
-		} else {
-			echo $row['availableDate'];
+			if($row['availableDate']=='0000-00-00') {
+				echo '<i>Not available</i>';
+			} else {
+				echo $row['availableDate'];
+			}
+
+			echo '</p></div><p>Bedrooms: ' . $row['bed'] . '<br/>Bathrooms: ' . $row['bath'] . '<br/>Garage: ' . $row['garage'] . '<br/>';
+			echo 'Pets: ';
+
+			if($row['pets']==0) {
+				echo "No pets allowed<br/>";
+			} else {
+				echo "Pets allowed. See owner for details.<br/>";
+			};
+
+			echo 'Amenities: ' . $row['amenities'] . '</p>';
+			echo '<h3>Property Description</h3><p>';
+
+			if(!$row['desc']) {
+				echo '<i>No description is available</i></p>';
+			} else {
+				echo $row['desc'] . '</p>';
+			};
+
+			echo '<div class="school"><h3>School District</h3><p>Elementary School: ' . $row['elementary'] . '<br/>Middle School: '. $row['middle'] . '<br/>High School: ' . $row['high'] . '</p></div></div>';
 		}
-
-		echo '</p></div><p>Bedrooms: ' . $row['bed'] . '<br/>Bathrooms: ' . $row['bath'] . '<br/>Garage: ' . $row['garage'] . '<br/>';
-		echo 'Pets: ';
-
-		if($row['pets']==0) {
-			echo "No pets allowed<br/>";
-		} else {
-			echo "Pets allowed. See owner for details.<br/>";
-		};
-
-		echo 'Amenities: ' . $row['amenities'] . '</p>';
-		echo '<h3>Property Description</h3><p>';
-
-		if(!$row['desc']) {
-			echo '<i>No description is available</i></p>';
-		} else {
-			echo $row['desc'] . '</p>';
-		};
-
-		echo '<div class="school"><h3>School District</h3><p>Elementary School: ' . $row['elementary'] . '<br/>Middle School: '. $row['middle'] . '<br/>High School: ' . $row['high'] . '</p></div></div>';
 	}
 
 include('footer.php');
