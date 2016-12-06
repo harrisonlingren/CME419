@@ -1,7 +1,7 @@
 <?php
-include('../includes/header.html');
-include('../includes/error_report.php');
-require('../includes/dbConnect.php');
+include('header.html');
+include('error_report.php');
+require('db_connect.php');
 
 $type=$_POST['propertyType'];
 $street=$_POST['street'];
@@ -39,7 +39,7 @@ $resultRun = mysqli_query($dbc, $testLocation);
 if (!$resultRun) {
    $flag = false;
     echo "Error details: " . mysqli_error($dbc);
-}; 
+};
 
 $resultRun = mysqli_query($dbc, $testResidential);
 if (!$resultRun) {
@@ -71,12 +71,12 @@ mysqli_rollback($dbc);
 if($flag) {
 	mysqli_autocommit($dbc, true);
 	$result = mysqli_query($dbc, $testLocation);
-	if($result) {	
+	if($result) {
 	$getID="SELECT property_id FROM rental_location WHERE street='$street'";
 	$resultID = mysqli_query($dbc, $getID);
 	$row=mysqli_fetch_array($resultID, MYSQLI_ASSOC);
 	$newPropertyID=$row['property_id'];
-	
+
 	} else {
 		echo "This did not work." . mysqli_error($dbc);
 	};
@@ -91,16 +91,16 @@ if($flag) {
 
 		$addRent="INSERT INTO rental_rent (property_id, rent, status, availableDate) VALUES ('$newPropertyID','$rent', '$status', '$availDate')";
 
-		
+
 		$result2=mysqli_query($dbc, $addDetails);
 		$result3=mysqli_query($dbc, $addResidential);
 		$result4=mysqli_query($dbc, $addRent);
-		$result5=mysqli_query($dbc, $addSchool);		
+		$result5=mysqli_query($dbc, $addSchool);
 	}
-	
-	
-	
-	
+
+
+
+
 	//mysqli_commit($dbc);
 	echo "<p>The following property and property details have been added to the database:</p>";
 	echo "<h3>$street, $city, $state  $zip</h3>";
@@ -115,7 +115,3 @@ if($flag) {
 
 include('../includes/footer.html');
 ?>
-
-
-
-

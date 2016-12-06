@@ -2,7 +2,7 @@
 	include('header.php');
 	include('error_report.php');
 	require('db_connect.php');
-	?>
+?>
 
 <form action="search.php" method="post">
 	<h1>Search Properties</h1>
@@ -25,7 +25,6 @@
 </form>
 
 <?php
-
 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		echo "Form was submitted.";
 		$bed=$_POST['bed'];
