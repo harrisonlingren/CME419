@@ -1,8 +1,4 @@
-<?php
-	include('header.php');
-	include('error_report.php');
-	require('db_connect.php');
-?>
+<?php	include('header.php'); ?>
 
 <form action="search.php" method="post">
 	<h1>Search Properties</h1>
@@ -105,5 +101,4 @@
 		}
 	}
 
-include('footer.php');
-?>
+include('footer.php'); ?>
