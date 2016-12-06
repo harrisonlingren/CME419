@@ -1,3 +1,8 @@
+<?php
+  require('db_connect.php');
+  require('states.php');
+?>
+
 <html>
 <head>
   <title><?php echo 'Rental Properties'; ?></title>

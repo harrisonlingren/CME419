@@ -1,9 +1,4 @@
-<?php
-include('header.php');
-//include('error_report.php');
-require('db_connect.php');
-require('states.php');
-?>
+<?php include('header.php'); ?>
 <h2>Admin Portal</h2>
 
 
@@ -81,11 +76,11 @@ require('states.php');
 <div id="updateDiv">
   <div id="tableDivUpdate">
     <?php
-      if ($dbc) {
-        echo "<br />connected!<br />";
-      } else {
-        echo "<br />not connected!<br />";
-      }
+      // if ($dbc) {
+      //   echo "<br />connected!<br />";
+      // } else {
+      //   echo "<br />not connected!<br />";
+      // }
 
       $populate_query = "select * from location where type_id = 0";
       $run_query = mysqli_query($dbc, $populate_query);
@@ -110,11 +105,11 @@ require('states.php');
 <div id="deleteDiv">
   <div id="tableDivDelete">
     <?php
-      if ($dbc) {
-        echo "<br />connected!<br />";
-      } else {
-        echo "<br />not connected!<br />";
-      }
+      // if ($dbc) {
+      //   echo "<br />connected!<br />";
+      // } else {
+      //   echo "<br />not connected!<br />";
+      // }
 
       $populate_query = "select * from location where type_id = 0";
       $run_query = mysqli_query($dbc, $populate_query);

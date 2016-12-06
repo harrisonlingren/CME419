@@ -1,7 +1,6 @@
 <?php
-include('header.html');
-include('error_report.php');
-require('db_connect.php');
+include('header.php');
+//include('error_report.php');
 
 $type=$_POST['addType'];
 $street=$_POST['addStreet'];
