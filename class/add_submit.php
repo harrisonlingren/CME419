@@ -6,7 +6,7 @@ require('db_connect.php');
 $type=$_POST['addType'];
 $street=$_POST['addStreet'];
 $city=$_POST['addCity'];
-$state=$_POST['addState'];
+$state=$_POST['states'];
 $zip=$_POST['addZip'];
 $bed=$_POST['addBed'];
 $bath=$_POST['addBath'];
