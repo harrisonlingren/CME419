@@ -54,8 +54,8 @@ if($flag) {
 
   	$getID="SELECT property_id FROM rental_location WHERE street='$street'";
   	$resultID = mysqli_query($dbc, $getID);
-  	$row=mysqli_fetch_array($resultID, MYSQLI_ASSOC);
-  	$newPropertyID=$row['property_id'];
+  	$ID=mysqli_fetch_array($resultID, MYSQLI_ASSOC);
+  	$newPropertyID=$ID['property_id'];
 
     if(!empty($newPropertyID)) {
       $addResidential="INSERT INTO res_info (property_id, bed, bath, garage, pets) VALUES ('$newPropertyID', '$bed', '$bath', '$garage', '$pets')";
@@ -86,5 +86,5 @@ if($flag) {
 	echo "<p>The property was not added to the database. There was a problem with the form submission</p>";
 };
 
-include('../includes/footer.html');
+include('footer.php');
 ?>
