@@ -28,11 +28,11 @@ mysqli_autocommit($dbc, false);
 $flag=TRUE;
 
 //test the transaction
-$testLocation="INSERT INTO rental_location (street, city, state, zip, type_id) VALUES ('$street', '$city', '$state', '$zip', '$type')";
-$testResidential="INSERT INTO rental_residential (bed, bath, garage, pets) VALUES ('$bed', '$bath', '$garage', '$pets')";
-$testDetails="INSERT INTO rental_details (amenities, description) VALUES ('$amenity', '$desc')";
-$testSchool="INSERT INTO rental_school (county, elementary, middle, high) VALUES ('$county', '$elem', '$middle', '$high')";
-$testRent="INSERT INTO rental_rent (rent, status, availableDate) VALUES ('$rent', '$status', '$availDate')";
+$testLocation="INSERT INTO location (street, city, state, zip, type_id) VALUES ('$street', '$city', '$state', '$zip', '$type')";
+$testResidential="INSERT INTO res_info (bed, bath, garage, pets) VALUES ('$bed', '$bath', '$garage', '$pets')";
+$testDetails="INSERT INTO details (amenities, details.desc) VALUES ('$amenity', '$desc')";
+$testSchool="INSERT INTO school (county, elementary, middle, high) VALUES ('$county', '$elem', '$middle', '$high')";
+$testRent="INSERT INTO rent (rent, status, availableDate) VALUES ('$rent', '$status', '$availDate')";
 
 $resultRun = mysqli_query($dbc, $testLocation);
 
@@ -83,13 +83,13 @@ if($flag) {
 	echo $newPropertyID;
 	//run all the queries
 	if(!empty($newPropertyID)) {
-		$addResidential="INSERT INTO rental_residential (property_id, bed, bath, garage, pets) VALUES ('$newPropertyID', '$bed', '$bath', '$garage', '$pets')";
+		$addResidential="INSERT INTO res_info (property_id, bed, bath, garage, pets) VALUES ('$newPropertyID', '$bed', '$bath', '$garage', '$pets')";
 
-		$addDetails="INSERT INTO rental_details (property_id, amenities, description) VALUES ('$newPropertyID','$amenity', '$desc')";
+		$addDetails="INSERT INTO details (property_id, amenities, details.desc) VALUES ('$newPropertyID','$amenity', '$desc')";
 
-		$addSchool="INSERT INTO rental_school (property_id, county, elementary, middle, high) VALUES ('$newPropertyID','$county', '$elem', '$middle', '$high')";
+		$addSchool="INSERT INTO school (property_id, county, elementary, middle, high) VALUES ('$newPropertyID','$county', '$elem', '$middle', '$high')";
 
-		$addRent="INSERT INTO rental_rent (property_id, rent, status, availableDate) VALUES ('$newPropertyID','$rent', '$status', '$availDate')";
+		$addRent="INSERT INTO rent (property_id, rent, status, availableDate) VALUES ('$newPropertyID','$rent', '$status', '$availDate')";
 
 
 		$result2=mysqli_query($dbc, $addDetails);
