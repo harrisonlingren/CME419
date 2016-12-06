@@ -32,7 +32,7 @@ $testLocation="INSERT INTO location (street, city, state, zip, type_id) VALUES (
 $testResidential="INSERT INTO res_info (bed, bath, garage, pets) VALUES ('$bed', '$bath', '$garage', '$pets')";
 $testDetails="INSERT INTO details (amenities, details.desc) VALUES ('$amenity', '$desc')";
 $testSchool="INSERT INTO school (county, elementary, middle, high) VALUES ('$county', '$elem', '$middle', '$high')";
-$testRent="INSERT INTO rent (rent, status, availableDate) VALUES ('$rent', '$status', '$availDate')";
+$testRent="INSERT INTO rent (rent, status, availability) VALUES ('$rent', '$status', '$availDate')";
 
 $resultRun = mysqli_query($dbc, $testLocation);
 
@@ -89,7 +89,7 @@ if($flag) {
 
 		$addSchool="INSERT INTO school (property_id, county, elementary, middle, high) VALUES ('$newPropertyID','$county', '$elem', '$middle', '$high')";
 
-		$addRent="INSERT INTO rent (property_id, rent, status, availableDate) VALUES ('$newPropertyID','$rent', '$status', '$availDate')";
+		$addRent="INSERT INTO rent (property_id, rent, status, availability) VALUES ('$newPropertyID','$rent', '$status', '$availDate')";
 
 
 		$result2=mysqli_query($dbc, $addDetails);
