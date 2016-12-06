@@ -37,7 +37,7 @@ require('states.php');
       <legend>Property Details</legend>
       <input type="hidden" name="addType" value="residential" required/><br/>
       <label for="addState">Bed:</label>
-      <input type="number" id="addBed" required/><br/>
+      <input type="number" id="addBed" name="addBed" required/><br/>
       <label for="addBath">Bath:</label>
       <input type="number" id="addBath" name="addBath" required/><br/>
       <label for="addGarage">Garage:</label>
