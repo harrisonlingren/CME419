@@ -37,7 +37,7 @@ $testRent="INSERT INTO rent (rent, status, availability) VALUES ('$rent', '$stat
 $query_array = array($testLocation, $testResidential, $testDetails, $testSchool, $testRent);
 
 foreach ($query_array as $q) {
-  echo "\n" . $q . "\n";
+  //echo "\n" . $q . "\n";
   $resultRun = mysqli_query($dbc, $q);
 
   if (!$resultRun) {
