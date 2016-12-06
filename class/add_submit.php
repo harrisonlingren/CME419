@@ -52,7 +52,7 @@ if($flag) {
   $result = mysqli_query($dbc, $testLocation);
 	if($result) {
 
-  	$getID="SELECT property_id FROM rental_location WHERE street='$street'";
+  	$getID="SELECT property_id FROM location WHERE street='$street'";
   	$resultID = mysqli_query($dbc, $getID);
   	$ID=mysqli_fetch_array($resultID, MYSQLI_ASSOC);
   	$newPropertyID=$ID['property_id'];
