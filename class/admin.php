@@ -1,4 +1,10 @@
-<?php include('header.php'); ?>
+<?php
+  if (!isset($_SESSION['firstname'])) {
+    header('Location: https://blue.butler.edu/~hlingren/CME419/class/login.php');
+  }
+
+  include('header.php');
+?>
 <h2>Admin Portal</h2>
 
 
