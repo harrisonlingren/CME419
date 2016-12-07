@@ -1,5 +1,6 @@
 <?php
   if (!isset($_SESSION['firstname'])) {
+    echo $_SESSION['firstname'];
     header('Location: https://blue.butler.edu/~hlingren/CME419/class/login.php');
   }
 
