@@ -9,7 +9,7 @@
     $exec_q = mysqli_query($dbc, $login_q);
 
     if ($exec_q) {
-      $user_name = mysqli_fetch_array($exec_q, MYSQLI_ASSOC);
+      $user_name = mysqli_fetch_array($exec_q, MYSQLI_ASSOC)['firstname'];
       if (isset($user_name)) {
         $_SESSION['firstname'] = $user_name;
         echo "<h1>You are now logged in. Welcome, $user_name!</h1>";
