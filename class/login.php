@@ -8,7 +8,7 @@
   <label for="pass">Password</label>
   <input type="password" name="pass" id="pass" /><br /><br />
 
-  <button type="submit">Submit</button>
+  <button type="submit">Log in</button>
 
 </form>
 
