@@ -75,10 +75,10 @@
 			echo '<div class="propertyBox"><h1>' . $row['street'] . ', ' . $row['city'] . ', ' . $row['state'] . '  ' . $row['zip'] . '</h1><br/>';
 			echo '<div class="rentTable"><h3>Rent:</h3><p>$' . $row['rent'] . '/month</p><h3>Available Date:</h3><p>';
 
-			if($row['availableDate']=='0000-00-00') {
+			if($row['availability']=='0000-00-00') {
 				echo '<i>Not available</i>';
 			} else {
-				echo $row['availableDate'];
+				echo $row['availability'];
 			}
 
 			echo '</p></div><p>Bedrooms: ' . $row['bed'] . '<br/>Bathrooms: ' . $row['bath'] . '<br/>Garage: ' . $row['garage'] . '<br/>';
