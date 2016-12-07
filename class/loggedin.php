@@ -20,6 +20,7 @@
       echo "Problem with query: $login_q";
     }
   } else {
+    echo "Hi!";
     header('Location: https://blue.butler.edu/~hlingren/CME419/class/login.php');
   }
 
