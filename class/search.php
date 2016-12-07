@@ -65,6 +65,8 @@
 		//echo '<script>alert("It does not work");</script>';
 	}
 
+	echo "\n Query: $searchQ";
+
 
 // While Result loop
 	$search_query = mysqli_query($dbc, $searchQ);
