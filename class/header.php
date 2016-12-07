@@ -21,8 +21,10 @@
 
       <?php
         if (!isset($_SESSION['firstname'])) {
+          $logged_in = true;
           echo '<li><a href="login.php">Log in</a></li>';
         } else {
+          $logged_in = false;
           echo '<li><a href="loggedout.php">Log out</a></li>';
         }
       ?>
