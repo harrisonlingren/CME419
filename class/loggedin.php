@@ -5,7 +5,7 @@
     $pass = $_POST['pass'];
     $pass = md5($pass);
 
-    $login_q = "SELECT firstname FROM users WHERE user = '$user' and pass = '$pass'";
+    $login_q = "SELECT firstname FROM rental_users WHERE user = '$user' and pass = '$pass'";
     $exec_q = mysqli_query($dbc, $exec_q);
 
     if ($exec_q) {
