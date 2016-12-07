@@ -1,5 +1,7 @@
 <?php include('header.php'); ?>
 
+<h1>Administrator Login</h1>
+
 <form action="loggedin.php" method="POST">
 
   <label for="user">Username</label>
