@@ -22,11 +22,11 @@
 
 <?php
 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
-		echo "Form was submitted.";
+		//echo "Form was submitted.";
 		$bed=$_POST['bed'];
-		$bath=$_POST['bed'];
-		$rent=$_POST['bed'];
-		$availDate=$_POST['bed'];
+		$bath=$_POST['bath'];
+		$rent=$_POST['rent'];
+		$availDate=$_POST['availDate'];
 
 		$searchQ = "SELECT street, city, state, zip, bed, bath, garage,
 									pets, amenities, details.desc, rent, status,
