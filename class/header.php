@@ -1,6 +1,7 @@
 <?php
   require('db_connect.php');
   require('states.php');
+  // include('error_report.php');
 ?>
 
 <html>
