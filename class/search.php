@@ -39,26 +39,26 @@
 								WHERE location.property_id >= 0";
 
 		if($bed) {
-			$searchQ .= " AND WHERE bed='$bed'";
+			$searchQ .= " AND bed='$bed'";
 		}
 		if($bath) {
-			$searchQ .= " AND WHERE bath='$bath'";
+			$searchQ .= " AND bath='$bath'";
 		}
 		if($rent) {
 			switch($rent) {
 				case '0':
 					break;
 				case '400':
-					$searchQ .= " AND WHERE rent <= 400";
+					$searchQ .= " AND rent <= 400";
 				case '2000':
-					$searchQ .= " AND WHERE rent > 1000";
+					$searchQ .= " AND rent > 1000";
 				default:
 					$rentLow = $rent - 200;
 					$searchQ .= " AND (rent > $rentLow) AND (rent <= $rent)";
 			}
 		}
 		if($availDate) {
-			$searchQ .= " AND WHERE availability=$availDate";
+			$searchQ .= " AND availability=$availDate";
 		}
 
 	} else {
