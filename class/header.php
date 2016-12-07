@@ -1,7 +1,7 @@
 <?php
   require('db_connect.php');
   require('states.php');
-  // include('error_report.php');
+  include('error_report.php');
 ?>
 
 <html>
@@ -24,6 +24,6 @@
           echo '<li><a href="loggedout.php">Log out</a></li>';
         }
       ?>
-      
+
     </ul>
   </header>
