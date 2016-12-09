@@ -65,7 +65,7 @@
 		//echo '<script>alert("It does not work");</script>';
 	}
 
-	echo "\n Query: $searchQ";
+	//echo "\n Query: $searchQ";
 
 
 // While Result loop
